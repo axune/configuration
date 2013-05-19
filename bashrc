@@ -107,5 +107,6 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\]\[\033[01;33m\]\$(__git_ps1) \[\0
 
 alias swapdisc="eject && sleep 2 && eject -t"
 
-PATH="$PATH"
+PATH="$PATH:$HOME/.bin"
 
+alias minecraft='java -jar $HOME/Downloads/minecraft.jar'

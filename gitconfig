@@ -3,3 +3,5 @@
 	email = axune86@gmail.com
 [core]
 	editor = vim
+[diff]
+	external = /home/ben/.bin/meld-git.sh
