@@ -5,6 +5,18 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# switch to workspace
+set $ws1 workspace 1: web
+set $ws2 workspace 2: code
+set $ws3 workspace 3: docs
+set $ws4 workspace 4: minecraft
+set $ws5 workspace 5: teamspeak
+set $ws6 workspace 6: media
+set $ws7 workspace 7
+set $ws8 workspace 8
+set $ws9 workspace 9: keepassx
+set $ws0 workspace 0
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -77,28 +89,28 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: web
-bindsym $mod+2 workspace 2: code
-bindsym $mod+3 workspace 3: docs
-bindsym $mod+4 workspace 4:
-bindsym $mod+5 workspace 5:
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8: keepassx
-bindsym $mod+9 workspace 9: multimedia
-bindsym $mod+0 workspace 10: admin
+bindsym $mod+1 $ws1
+bindsym $mod+2 $ws2
+bindsym $mod+3 $ws3
+bindsym $mod+4 $ws4
+bindsym $mod+5 $ws5
+bindsym $mod+6 $ws6
+bindsym $mod+7 $ws7
+bindsym $mod+8 $ws8
+bindsym $mod+9 $ws9
+bindsym $mod+0 $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1: web
-bindsym $mod+Shift+quotedbl move workspace 2: code
-bindsym $mod+Shift+sterling move workspace 3: docs
-bindsym $mod+Shift+dollar move workspace 4
-bindsym $mod+Shift+percent move workspace 5
-bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8: keepassx
-bindsym $mod+Shift+parenleft move workspace 9: multimedia
-bindsym $mod+Shift+parenright move workspace 10: admin
+bindsym $mod+Shift+exclam move $ws1
+bindsym $mod+Shift+quotedbl move $ws2
+bindsym $mod+Shift+sterling move $ws3
+bindsym $mod+Shift+dollar move $ws4
+bindsym $mod+Shift+percent move $ws5
+bindsym $mod+Shift+asciicircum move $ws6
+bindsym $mod+Shift+ampersand move $ws7
+bindsym $mod+Shift+asterisk move $ws8
+bindsym $mod+Shift+parenleft move $ws9
+bindsym $mod+Shift+parenright move $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -156,8 +168,18 @@ bar {
 force_xinerama yes
 focus_follows_mouse no
 
+exec /usr/bin/google-chrome
+for_window [class="Google-chrome"] move $ws1
+
+exec /usr/bin/gnome-terminal -t "Coding Terminal"
+for_window [title="Coding Terminal"] move $ws2
+
+#exec /usr/local/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh
+for_window [class="Ts3client_linux_amd64"] move $ws5
+
 exec /usr/bin/keepassx
+for_window [class="Keepassx"] move $ws9
 
 for_window [class="Meld"] floating enable
-for_window [class="net-minecraft-MinecraftLauncher"] floating enable
+for_window [title="Minecraft .*"] floating enable
 
