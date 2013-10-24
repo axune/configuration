@@ -1,2 +1,3 @@
+sed -i 's/^#exec i3$/exec i3/' .xsessionrc
 feh --bg-center .wallpaper
-exec i3
+#exec i3
