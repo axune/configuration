@@ -1,2 +1,4 @@
 .*.sw?
 id_rsa
+ssh/known_hosts
+vim/.netwrhist
