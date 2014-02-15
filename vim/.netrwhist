@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/media/store/personal/projects/active/mcserv'
-let g:netrw_dirhist_2='/tmp/linux-3.8-rc6'
-let g:netrw_dirhist_3='/tmp/linux-3.8-rc6/include'
-let g:netrw_dirhist_4='/tmp/linux-3.8-rc6/include/linux'
-let g:netrw_dirhist_5='/media/store/personal/projects/active/RedstoneMania/src/com/bergerkiller/bukkit/rm'
-let g:netrw_dirhist_6='/media/store/personal/projects/active/RedstoneMania/src/com/bergerkiller/bukkit/rm/element'
