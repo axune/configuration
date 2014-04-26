@@ -9,7 +9,7 @@
 set $ws1 workspace 1: web
 set $ws2 workspace 2: code
 set $ws3 workspace 3: docs
-set $ws4 workspace 4: minecraft
+set $ws4 workspace 4: gaming
 set $ws5 workspace 5: teamspeak
 set $ws6 workspace 6: media
 set $ws7 workspace 7: skype
@@ -186,6 +186,7 @@ for_window [class="Keepassx"] move $ws1
 for_window [class="Meld"] floating enable
 for_window [title="Minecraft .*"] floating enable
 for_window [class="zsnes"] floating enable
+for_window [title="STEINS;GATE"] floating enable
 
 exec xbacklight -set 10
 
